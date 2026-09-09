@@ -57,13 +57,16 @@
         
         <div class="row q-col-gutter-md">
           <div v-for="persona in equipo" :key="persona.id" class="col-12 col-sm-4">
-            <q-card flat bordered class="text-center q-pa-sm">
-              <q-avatar size="90px" class="q-mt-xs">
-                <img :src="persona.foto" />
-              </q-avatar>
+            <q-card flat bordered class="text-center q-pa-sm shadow-1 fit">
+              <!-- IMAGEN MÁS GRANDE Y ADAPTABLE -->
+              <q-img 
+                :src="persona.foto" 
+                height="180px" 
+                class="rounded-borders shadow-1"
+              />
               <q-card-section class="q-pa-xs q-mt-sm">
                 <div class="text-bold text-subtitle1">{{ persona.nombre }}</div>
-                <q-chip size="sm" color="red-1" text-color="red-9" class="text-bold">{{ persona.cargo }}</q-chip>
+                <q-chip size="sm" color="red-1" text-color="red-9" class="text-bold q-mt-xs">{{ persona.cargo }}</q-chip>
               </q-card-section>
             </q-card>
           </div>
