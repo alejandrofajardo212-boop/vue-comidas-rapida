@@ -14,12 +14,13 @@
       </div>
     </q-img>
 
-    <div class="q-pa-md" style="max-width: 1200px; margin: 0 auto">
+    <div class="q-pa-md" style="max-width: 1000px; margin: 0 auto">
       <div class="row q-col-gutter-md">
+        <!-- AQUÍ QUEDÓ FORZADO A 2 TARJETAS POR FILA EN PC (col-sm-6) -->
         <div
           v-for="item in lista"
           :key="item.id"
-          class="col-12 col-sm-6 col-md-3"
+          class="col-12 col-sm-6"
         >
           <q-card
             flat
